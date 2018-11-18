@@ -26,7 +26,7 @@
         }
         echo "<h2>$_GET['id']</h2>"
         echo "<br>"
-        file_get_contents("$_GET['id']");
+        
       ?>
       <h2>이게 이문서의 끝입니다.</h2>
     </ol>

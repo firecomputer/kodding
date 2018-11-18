@@ -9,13 +9,24 @@
     <br>
     <ol>
       <?php
-        $list = scandir('./data');
-        $i = 0;
+        $list = array("","");
+        while ($i <= 10) {
+          if(file_exists("$i")) {
+            array_push($list, "$i");
+            $i = $i + 1;
+          }
+          else {
+            break;
+          }
+        }
+        $i = 3;
         while ($i < count($list)) {
           echo "<li><a href=\"program.php?id=$list[$i]\">$list[$i]</a></li>\n";
           $i = $i + 1;
         }
         echo "<h2>$_GET['id']</h2>"
+        echo "<br>"
+        file_get_contents("$_GET['id']");
       ?>
       <h2>이게 이문서의 끝입니다.</h2>
     </ol>

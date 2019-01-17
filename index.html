@@ -7,6 +7,11 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="786049226897-mmf5ad5vn9cehfvm85dmhdmelgqgdd2a.apps.googleusercontent.com">
     <script>
+      function init() {
+        consol.log('init'); 
+      }
+    </script>
+    <script>
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -28,8 +33,8 @@
       <br>
       <br>
       <br>
-      제작자: 통영초등학교 6학년 김재현(곧 중학교)<br>
-      2019년 10월 11일에 도메인이 kodding.ga로 바뀝니다.
+      제작자: 통영초등학교 6학년 김재현(곧 중학교)
+      <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
     </p>
   </body>
 </html>

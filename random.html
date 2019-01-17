@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>코딩습관-제비뽑기</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function non(){
+        var x = document.getElementById("my").value;
+        if (x == false) {
+          alert('종이의 수를 입력하세요')
+          return false;
+        }
+      run()
+    }
+    function run() {
+      var x = document.getElementById("my").value;
+      var a = Math.floor(Math.random() * x);
+      var b = Math.floor(Math.random() * x);
+      if(a == b){
+        alert('축하드립니다!! 당첨되셨습니다!!');
+      }
+      if(a != b){
+        alert('아.. 아깝습니다.')
+      }
+    }
+    document.write('제비뽑기입니다. 종이의 수를 입력하고 버튼을 클릭하세요')
+    </script>
+    <button type="button" onclick="non()"><h1>시작버튼</h1></button>
+    <input type = "number" id="my">
+    <style media="screen">
+      button{
+        padding:0px;
+        width:120px;
+        position: relative;
+        left:50px;
+        top:380px;
+      }
+      input{
+        padding:0px;
+        width:200px;
+        height: 50px;
+        position: relative;
+        left:0px;
+        transform: translateX(-50%);
+        top:300px;
+      }
+    </style>
+  </body>
+</html>

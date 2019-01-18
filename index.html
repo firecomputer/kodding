@@ -13,11 +13,11 @@
           console.log('auth2');
           var a = gapi.auth2.init({
             client_id: '786049226897-mmf5ad5vn9cehfvm85dmhdmelgqgdd2a.apps.googleusercontent.com'
-          )};
+          });
           a.then(function(){
             console.log('googleAuth Success');
           }, function() {
-            console.log('googleAuth Fail')
+            console.log('googleAuth Fail');
           });
         });
       }

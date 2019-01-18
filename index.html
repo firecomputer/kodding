@@ -9,15 +9,14 @@
       console.log('hello')
       function init() {
         console.log('init'); 
-        gapi.load('auth2', function() { // Ready. });
+        gapi.load('auth2', function() {
           console.log('auth2');
           var gauth = gapi.auth2.init({
             client_id: '786049226897-mmf5ad5vn9cehfvm85dmhdmelgqgdd2a.apps.googleusercontent.com'
-          })
+          });
           gauth.then(function(){
             console.log('googleAuth Success');
           }, function() {
-            console.log('googleAuth Fail');
           });
         });
       }

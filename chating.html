@@ -6,20 +6,16 @@
   </head>
   <body>
     <a href ="index.html"><img src="codinglogo.jpg" width="500" style="display: block; margin-left: auto; margin-right: auto;"></a>
-    <br><br><br><br><br><br><br><br><br><br><br><h1>채팅하려면 여기를 클릭하세요-></h1>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5c42c56bab5284048d0d9eab/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+    <script src="https://apis.google.com/js/plusone.js"></script>
+    <div id="comments"></div>
+    <script>
+    gapi.comments.render('comments', {
+        href: window.location,
+        width: '624',
+        first_party_property: 'BLOGGER',
+        view_type: 'FILTERED_POSTMOD'
+});
+</script>
 <!--End of Tawk.to Script-->
   </body>
 </html>

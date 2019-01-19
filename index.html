@@ -6,6 +6,17 @@
     <meta name="google-site-verification" content="3p1_scWsIrEbDjeuo67VSy4kE7uLQcc0IITrOQoEGy4" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript">
+    var naverLogin = new naver.LoginWithNaverId(
+		  {
+			  clientId: "aTODjMhTpxL6CxLaglcR",
+			  callbackUrl: "https://kodding.zz.am/callback/",
+			  isPopup: true, /* 팝업을 통한 연동처리 여부 */
+			  loginButton: {color: "green", type: 2, height: 60} /* 로그인 버튼의 타입을 지정 */
+		  }
+	  );
+	
+	/* 설정정보를 초기화하고 연동을 준비 */
+	  naverLogin.init();
     </script>
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
     
@@ -37,7 +48,6 @@
 </script>
   </head>
   <body>
-    <img src="로그인.PNG" width="10%">
     <a href ="index.html"><img src="codinglogo.jpg" width="500" style="display: block; margin-left: auto; margin-right: auto;"></a>
     <h2 style="text-align:center;">코딩습관 사이트에 오신것을 <br>환영 합니다.</h2>
     <p style="text-align:center;">

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>코딩습관-클릭커게임</title>
+  </head>
+  <body>
+    <a href ="index.html"><img src="codinglogo.jpg" width="500" style="display: block; margin-left: auto; margin-right: auto;"></a>
+    <div style="text-align:center;">
+    <script>
+      function hello() {
+        var a;
+        var b;
+        var c;
+        var y;
+        var x;
+        var a = Math.floor(Math.random() * 99999999);
+        var b = Math.floor(Math.random() * 300000);
+        var c = Math.floor(Math.random() * 1000);
+        var y = [a, b, c];
+        var x = Math.floor(Math.random() * 3);
+        alert('당신의 미래 월급은 ' + y[x] + '원입니다.');
+      }
+    </script><br><br><br><br>
+    <a href="#" onclick="hello()"><h1>시작</h1></a>
+  </div>
+  </body>
+</html>

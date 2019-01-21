@@ -5,59 +5,30 @@
     <title>코딩습관-제비뽑기</title>
   </head>
   <body>
-    <a href="list.html">메뉴로 가기</a><br><br>
     <script type="text/javascript">
-      var c = -1
       function non(){
         var x = document.getElementById("my").value;
-        var y = document.getElementById("hi").value;
-        if (x == false) {
+        if (x ==  false) {
           alert('종이의 수를 입력하세요')
-          return false;
-        if (y == false) {
-          alert('꽝의 수를 입력하세요')
           return false;
         }
       run()
     }
     function run() {
       var x = document.getElementById("my").value;
-      var y = document.getElementById("hi").value;
-      var z = [];
-      if(c == -1) {
-        d = 0
-        while(d < y) {
-          z.unshift(Math.floor(Math.random() * x))
-          var d = d + 1; 
-        }
-        var c = 1;
-        var ha = 0;
+      var a = Math.floor(Math.random() * x);
+      var b = Math.floor(Math.random() * x);
+      if(a == b){
+        alert('축하드립니다!! 당첨되셨습니다!!');
       }
-      if(ha < x)
-        if(z.indexof(ha) != -1){
-          alert("아,.. 꽝에 당첨되셨습니다..!")
-        }
-        if(z.indexof(ha) == -1){
-          alert("꽝을 면제했습니다!!")
-        }
+      if(a != b){
+        alert('아.. 아깝습니다.')
       }
-      if(ha > x) {
-        return false;
-      }
-      var ha = ha + 1
-      document.write('<a href="list.html">메뉴로 가기</a><br><br>')
-      document.write('뽑은 종이의 수:' + ha)
-      document.write('<button type="button" onclick="non()"><h1>시작버튼</h1></button><input type = "number" id="my" value="종이의 수"><input type="number" id="hi" value="꽝의 수"><button type="button" onclick="hello()"><h1>초기화</h1></button>')
-    }
-    function hello() {
-      var ha = 0;
     }
     document.write('제비뽑기입니다. 종이의 수를 입력하고 버튼을 클릭하세요')
     </script>
     <button type="button" onclick="non()"><h1>시작버튼</h1></button>
-    <input type = "number" id="my" value="종이의 수">
-    <input type="number" id="hi" value="꽝의 수">
-    <button type="button" onclick="hello()"><h1>초기화</h1></button>
+    <input type = "number" id="my">
     <style media="screen">
       button{
         padding:0px;

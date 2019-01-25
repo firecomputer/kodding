@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:/program2.html
+Disallow:/list.html
+Disallow:/smartlist.html
+Disallow:/newlist.html
+Disallow:/gamelist.html

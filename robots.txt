@@ -1,0 +1,2 @@
+User-agent: *
+Disallow:/program2.html

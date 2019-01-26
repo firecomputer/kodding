@@ -3,3 +3,5 @@ Disallow:/list.html
 Disallow:/smartlist.html
 Disallow:/newlist.html
 Disallow:/gamelist.html
+Disallow:/moneygame.html
+Disallow:/moneytell.html

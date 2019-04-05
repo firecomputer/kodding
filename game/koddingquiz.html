@@ -20,6 +20,18 @@
           }
       }
       function answer2(say) {
+        if(say == answer[quiz2]) {
+          document.write('<div class="big">정답입니다!!!<br>3초뒤 다음 문제로 넘어갑니다...</div>') 
+          settimeout(3000)
+          var b = 'https://kodding.zz.am/game/koddingquiz.html?score="' + toString(getParameter('score') + 1) + '"'
+          window.location.herf= b
+        }
+        if(say != answer[quiz2]) {
+          document.write('<div class="big">틀렸습니다...<br>3초뒤 다음 문제로 넘어갑니다...</div>') 
+          settimeout(3000)
+          var b = 'https://kodding.zz.am/game/koddingquiz.html?score="' + toString(getParameter('score')) + '"'
+          window.location.herf= b
+        }
       }
       var quiz = [
 
@@ -29,8 +41,9 @@
     ];
       var answer = [2,2];
       var quiz2 = Math.floor(Math.random() * quiz.length)
+      document.write(getParameter('score') + 점)
       document.write(quiz[quiz2])
-      document.write('<img src="https://kodding.zz.am/o.png" width="100px" onclick="answer2(1)"> <img src="https://kodding.zz.am/x.png" width="100px" onclick="answer2(2)">')
+      document.write('<a class="check1" href="#" onclick="answer2(1)"><img src="https://kodding.zz.am/o.png" alt="정답표시" width="100px"></a> <a class="check2" href="#" onclick="answer2(2)"><img src="https://kodding.zz.am/x.png" alt="오답표시" width="100px"></a>')
     </script>
     <style media="screen">
       .veryeasy {
@@ -39,6 +52,16 @@
       .big {
         text-align:center;
         font-size:200%
+      }
+      .check1 {
+        margin-left: 35%; 
+        margin-top: auto; 
+        margin-bottom: auto;
+      }
+      .check2 {
+        margin-right: 35%; 
+        margin-top: auto; 
+        margin-bottom: auto; 
       }
     </style>
   </body>

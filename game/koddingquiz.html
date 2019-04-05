@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="kor">
+  <head>
+    <meta charset="utf-8">
+    <title>코딩습관 - 코딩퀴즈</title>
+    <meta name="viewport" content="width=device-width,">
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getParameter(param) {
+        var returnValue;
+        var url = location.href;
+        var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var varName = parameters[i].split('=')[0];
+            if (varName.toUpperCase() == param.toUpperCase()) {
+                returnValue = parameters[i].split('=')[1];
+                return decodeURIComponent(returnValue);
+            }
+          }
+      }
+      var quiz = [
+
+      '<h1 class="big"><div class="veryeasy">(핵쉬움)</div> mit에서 개발한 코딩교육용 블록코딩 프로그램은 코딩습관이다</h1>',
+      '<h1 class="big"><div class="veryeasy">(핵쉬움)</div> 엔트리로 게임을 만들때 C언어로 코딩한다</h1>'
+
+    ];
+      var answer = [2,2];
+      var quiz2 = Math.floor(Math.random() * quiz.length)
+      document.write(quiz[quiz2])
+    </script>
+    <style media="screen">
+      .veryeasy {
+        color:gray;
+      }
+      .big {
+        text-align:center;
+        font-size:200%
+      }
+    </style>
+  </body>
+</html>

@@ -21,16 +21,14 @@
       }
       function answer2(say) {
         if(say == answer[quiz2]) {
-          document.write('<div class="big">정답입니다!!!<br>3초뒤 다음 문제로 넘어갑니다...</div>') 
-          settimeout(3000)
-          var b = 'https://kodding.zz.am/game/koddingquiz.html?score="' + toString(getParameter('score') + 1) + '"'
-          window.location.herf= b
+          setTimeout(function(){
+          document.write('<div class="big">정답입니다!!!<br>3초뒤 다음 문제로 넘어갑니다...</div>' + 'var b = \"https://kodding.zz.am/game/koddingquiz.html?score="\' + toString(getParameter(\'score\')) + \'"\'; window.location.herf= b }, 3000);')
+          }, 3000);
         }
         if(say != answer[quiz2]) {
-          setTimeout(function(){           
-          var b = 'https://kodding.zz.am/game/koddingquiz.html?score="' + toString(getParameter('score')) + '"'
-          window.location.herf= b }, 3000);
-          document.write('<div class="big">틀렸습니다...<br>3초뒤 다음 문제로 넘어갑니다...</div>')
+          setTimeout(function(){          
+          document.write('<div class="big">틀렸습니다...<br>3초뒤 다음 문제로 넘어갑니다...</div>' + 'var b = \"https://kodding.zz.am/game/koddingquiz.html?score="\' + toString(getParameter(\'score\')) + \'"\'; window.location.herf= b }, 3000);')
+          }, 3000);
         }
       }
       var quiz = [

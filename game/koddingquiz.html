@@ -22,6 +22,7 @@
       function answer2(say) {
         var hey = getParameter('score')
         if(say == answer[quiz2]) {
+          alert('정답입니다!! 당신이 맞춘 문제는<br>'+ quiz[quiz2] + '<br>입니다...')
           document.write('<div style="text-align:center; font-size:200%;">정답입니다!!<br>버튼을 누르면 다음문제로 넘어갑니다...</div>')
           document.write('<div style="text-align:center; font-size:200%;"><a href="https://kodding.zz.am/game/koddingquiz.html?score="' + toString(hey + 1)+ '">다음단계</a>')
         }
@@ -38,7 +39,6 @@
     ];
       var answer = [2,2];
       var quiz2 = Math.floor(Math.random() * quiz.length)
-      document.write(getParameter('score') + '점')
       document.write(quiz[quiz2])
       document.write('<a class="check1" href="#" onclick="answer2(1)"><img src="https://kodding.zz.am/o.png" alt="정답표시" width="100px"></a> <a class="check2" href="#" onclick="answer2(2)"><img src="https://kodding.zz.am/x.png" alt="오답표시" width="100px"></a>')
     </script>

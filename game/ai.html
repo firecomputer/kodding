@@ -44,12 +44,7 @@
         webcam.update(); // update the webcam frame
         await predict();
         window.requestAnimationFrame(loop);
-        if (devices[i].kind == 'videoinput' && devices[i].label.indexOf('back') !== -1) {
-            if (window.stream) {
-                videoElement.src = null;
-                window.stream.stop();
     }
-
     // run the webcam image through the image model
     async function predict() {
         // predict can take in an image, video or canvas html element
